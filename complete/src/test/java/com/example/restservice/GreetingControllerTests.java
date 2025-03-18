@@ -36,10 +36,15 @@ public class GreetingControllerTests {
 
 	@Test
 	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
+		/**
+		 descriçaõ do teste
+		 1. O código a seguir executa uma solicitação GET para /greeting e espera um status 200 OK.
+		 2. Ele também espera que o conteúdo seja "Hello, World!".
+		 3. O andDo(print()) imprimirá a solicitação e a resposta.
+		 4. Se a solicitação não for OK ou o conteúdo não for o esperado, o teste falhará.
+		 */
 
-		// verifica se a API retorna a mensagem padrão de saudação
-		// se nenhum parâmetro é fornecido na requisição.
-		// retorna um um JSON contendo {"content": "Hello, World!"}
+		
 
 		this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
 				.andExpect(jsonPath("$.content").value("Hello, World!"));
@@ -48,9 +53,13 @@ public class GreetingControllerTests {
 	@Test
 	public void paramGreetingShouldReturnTailoredMessage() throws Exception {
 
-		// verifica se a API retorna a mensagem de saudação personalizada
-		// se um parâmetro é fornecido na requisição.
-		// retorna um um JSON contendo {"content": "Hello, Spring Community!"}
+		/**
+		descriçaõ do teste
+		1. O código a seguir executa uma solicitação GET para /greeting e espera um status 200 OK.
+		2. Ele também espera que o conteúdo seja "Hello, Spring Community!".
+		3. O andDo(print()) imprimirá a solicitação e a resposta.
+		4. Se a solicitação não for OK ou o conteúdo não for o esperado, o teste falhará.
+		 */
 		
 
 		this.mockMvc.perform(get("/greeting").param("name", "Spring Community"))
