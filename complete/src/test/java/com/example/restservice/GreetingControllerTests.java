@@ -41,7 +41,7 @@ public class GreetingControllerTests {
 		 1. O código a seguir executa uma solicitação GET para /greeting e espera um status 200 OK.
 		 2. Ele também espera que o conteúdo seja "Hello, World!".
 		 3. O andDo(print()) imprimirá a solicitação e a resposta.
-		 4. Se a solicitação não for OK ou o conteúdo não for o esperado, o teste falhará.
+		 4. Se a solicitação não estiver OK ou o conteúdo não for o esperado, o teste falhará.
 		 */
 
 		
